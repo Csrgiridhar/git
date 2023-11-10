@@ -46,7 +46,7 @@ const Registration = () => {
             <input className='input1' type='password' placeholder='Confirm password' required name='RepeatPassword'   onChange={handleChange}  /><br></br>
             
 
-            <button className='but1' type='submit' >Register</button>
+            {/* <button className='but1' type='submit' >Register</button> */}
             {/* <Link to='/Registration1'><button type='submit' className='but1'>submit</button></Link> */}
             {/* <h1>name:{regForm.Name},phone:{regForm.Phone},email:{regForm.Email}</h1> */}
         </form>
