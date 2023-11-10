@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom' ;
+// import Home from './pages/Home';
+// import Contents from './pages/Contents';
+// import Search from './pages/Search';
+// import Forms from './pages/Forms';
+import Registration from './pages/Registration';
+import Signin from './pages/Signin';
+import Dashboard from './pages/Dashboard';
+import About from './pages/About';
+
+
+// import Hookclass from './pages/Hookclass';
+// import Registration1 from './pages/Registration1';
+// import Formdata from './pages/Formdata';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+// import MapFuction2 from './pages/MapFuction2';
+// import MapFuction2 from './pages/MapFuction2';
+// import Newfile from './pages/Newfile';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Hookclass/> */}
+      <Router>
+        <Routes>
+        {/* <Route path='/' element={<Newfile />} /> */}
+
+          <Route path='/' element={<Registration />} />
+          <Route path='/Signin' element={<Signin />} />
+          <Route path='/Dashboard' element={<Dashboard />} />
+          <Route path='/About' element={<About />} />
+
+          {/* <Route path='/Registration1' element={<Registration1 />} />
+          <Route path='/Formdata' element={<Formdata />} /> */}
+
+
+        </Routes>
+      </Router>
     </div>
   );
 }
